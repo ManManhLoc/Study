@@ -1,0 +1,77 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+class fractions
+{
+	public:
+		double a;
+		double b;
+		double c;
+		double d;
+	double Addition(void)
+	{
+		return (a*d + b*c) / (b*d) ; 
+	}	
+	double Subtraction(void)
+	{
+		return  (a*d - b*c) / (b*d);
+	}
+	double Multiplication(void)
+	{
+		return (a*c) / (b*d) ;
+	}
+	double Division(void)
+	{
+		return (a*d) / (b*c) ;
+	}	
+};
+void Input(fractions &P1)
+{
+	do
+	{
+		cout<<"Enter a, b, c, d :";
+		cin>>P1.a>>P1.b>>P1.c>>P1.d;
+	}while(P1.a<=0||P1.b<=0||P1.c<=0||P1.d<=0);
+}
+int main()
+{
+	fractions P1;
+	
+	int a;
+	char n;
+	do
+	{	
+	Input(P1);
+	cout<<"1 Addition: a/b + c/d = \n";
+ 	cout<<"2 Subtraction: a/b - c/d = \n"; 
+ 	cout<<"3 Multiplication: a/b * c/d = \n"; 
+ 	cout<<"4 Division: a/b / c/d = \n ";
+ 	cin>>a;
+ 	switch(a)
+ 	{
+ 		case 1:
+ 			{
+ 				cout<<P1.Addition();
+ 				break;
+			}
+ 		case 2:
+ 			{
+ 				cout<<P1.Subtraction();
+ 				break;
+			}
+		case 3:
+			{
+				cout<<P1.Multiplication();
+				break;
+			}
+		default:
+			{
+			cout<<P1.Division();
+			}
+	}
+	cout<<"Another question y/n ?";
+	cin>>n;
+	}while(n=='y');
+	return 0;
+}
