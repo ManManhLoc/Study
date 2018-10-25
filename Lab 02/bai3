@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	float a,b;
+	char n ;
+	char m ;
+do
+{		
+	cin>>a;cin>>n;cin>>b;
+	
+	switch(n)
+{
+	case '/':
+	{	
+	do
+	{
+		if(b==0)
+		{
+			cout<<"Nhap lai b\n";
+			cout<<"Nhap b :";cin>>b;			
+		}
+	}while(b==0);
+		cout<<a/b;		
+		break; 	
+	}
+	case '*':
+	{	
+		cout<<a*b;
+		break ;
+	}
+	case '+':
+	{
+		cout<<a+b;
+		break;	
+	}
+	case '-':
+		cout<<a-b;
+		break;
+	default:
+	break;
+}
+cout<<"\nDo another y/n ?";cin>>m;
+}while(m=='y');
+return 0;
+}
+
+
