@@ -9,8 +9,8 @@ int main()
 	float initial_amount;
 	float number_of_year; 
 	float rate;
-	nhap( initial_amount,number_of_year,rate); 
-	tong(initial_amount,number_of_year,rate);
+	nhap( initial_amount, number_of_year,rate); 
+	tong(initial_amount, number_of_year,rate);
 	return 0;
 }
 
