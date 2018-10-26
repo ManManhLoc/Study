@@ -17,8 +17,8 @@ do
 	{
 		if(b==0)
 		{
-			cout<<"Nhap lai b\n";
-			cout<<"Nhap b :";cin>>b;			
+			cout<<"Nhap lai mau so :";
+			cin>>b;cout<<endl;			
 		}
 	}while(b==0);
 		cout<<a/b;		
@@ -44,5 +44,3 @@ cout<<"\nDo another y/n ?";cin>>m;
 }while(m=='y');
 return 0;
 }
-
-
